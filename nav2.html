@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title>gestionbiblio</title>
+    <link rel="stylesheet" href="nav2.css">
+    <link rel="stylesheet" href="livreF.css">
+    <link rel="stylesheet" href="eleveF.css">
+    <link rel="stylesheet" href="photoeleve.css">
+    <script type="text/javascript" src="livreF.js"></script>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="sidebar close">
+    <div class="logo-details">
+      <a href="nav2.html">
+        <span class="image">
+          <img src="logo.png" alt="logo" onclick="">
+        </span></a>
+        <span class="logo_name">Etablissement<br><center>GSMP</center></span>
+    </div>
+    <ul class="nav-links">
+      <li>
+      
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Livre</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="#">
+            <i class='bx bx-book icon' ></i>
+            <span class="link_name">Livre</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow' ></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">Livre</a></li>
+          <li>
+            <a href="livreF.php"><h3>📓</h3>&ensp;Ajouter livre</a></li>
+          <li><a href="tableL.php"><h3>✏️</h3>&ensp;Modifier livre</a></li>
+          <li><a href="plustard.html"><h3>📕</h3><sup>➕</sup>&ensp;Prêter livre</a></li>
+        </ul>
+      </li>
+      <br>
+      <li>
+        <div class="iocn-link">
+          <a href="#">
+            <i class='bx bx-user icon' ></i>
+            <span class="link_name">Élève</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow' ></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">Élève</a></li>
+          <li><a href="eleveF.php"><h3>➕️</h3>&ensp;Ajouter élève</a></li>
+          <li><a href="tableE.php"><h3>👤<sup>✏️</sup></h3>&ensp;Modifier élève</a></li>
+        </ul>
+      </li>
+      <br>
+      <li>
+        <div class="iocn-link">
+          <a href="#">
+            <i class='bx bx-compass' ></i>
+            <span class="link_name">Liste</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow' ></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">Liste</a></li>
+          <li><a href="plustard.html"><h3>👤</h3>&ensp;élèves possédant livre</a></li>
+          <li><a href="#"><h3>📚</h3>&ensp;Livre par catégorie</a></li>
+        </ul>
+      </li>
+      <br>
+      <li>
+        <a href="#">
+          <i class='bx bx-history'></i>
+          <span class="link_name">Historique</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="plustard.html">History</a></li>
+        </ul>
+      </li>
+      <li>
+      </li>
+      <li>
+       
+  </li>
+</ul>
+
+  </div>
+  
+  <!--<section class="home-section">
+    <div class="home-content">
+      <i class='bx bx-menu' ></i>
+    </div>
+  </section>-->
+  <script>
+  let arrow = document.querySelectorAll(".arrow");
+  for (var i = 0; i < arrow.length; i++) {
+    arrow[i].addEventListener("click", (e)=>{
+   let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
+   arrowParent.classList.toggle("showMenu");
+    });
+  }
+  let sidebar = document.querySelector(".sidebar");
+  let sidebarBtn = document.querySelector(".bx-menu");
+  console.log(sidebarBtn);
+  sidebarBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("close");
+  });
+  </script>
+</body>
+</html>
+
